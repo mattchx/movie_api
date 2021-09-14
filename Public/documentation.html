@@ -5,6 +5,110 @@
     <title>Movie Maestro</title>
   </head>
   <body>
-    <p>Welcome to the Greatest Movie Database</p>
+    <h1>Welcome to my Awesome Movie Database!</h1>
+    <h2>
+      This data base will tell you a little move movies, genres, their directors
+      and their release dates
+    </h2>
+    <h3>Below you will find the endpoints</h3>
+
+    <table>
+      <tr>
+        <th>Request</th>
+        <th>URL</th>
+        <th>Response</th>
+      </tr>
+      <tr>
+        <td>GET list of all movies</td>
+        <td>/movies</td>
+        <td>
+          A JSON holding all the titles as objects, e.g.:<br />{title:
+          Snatch,<br />director: Guy Ritchie<br />genre: Crime comedy}
+        </td>
+      </tr>
+      <tr>
+        <td>GET list of all users</td>
+        <td>/users</td>
+        <td>
+          A JSON holding all the users as objects, e.g.:<br />{title: User 1,<br />id:
+          1}
+        </td>
+      </tr>
+      <tr>
+        <td>GET list of all directors</td>
+        <td>/directors</td>
+        <td>
+          A JSON holding all the directors as objects, e.g.:<br />{name: Guy
+          Ritchie,<br />birthDate: 1968}
+        </td>
+      </tr>
+      <tr>
+        <td>GET user by name</td>
+        <td>/users/:username</td>
+        <td>
+          A JSON objects with user' data, e.g.:<br />{name: user A,<br />id: 1}
+        </td>
+      </tr>
+      <tr>
+        <td>GET movie by title</td>
+        <td>/movies/:title</td>
+        <td>
+          A JSON object with title's data, e.g.:<br />{title: Pretty in Pink,<br />director:
+          Howard Deutch<br />genre: Teen/romance/Comedy}
+        </td>
+      </tr>
+      <tr>
+        <td>GET director by name</td>
+        <td>/directors/:name</td>
+        <td>
+          A JSON object with directors's data, e.g.:<br />{name: Howard
+          Deutch,<br />birthDate: 1950}
+        </td>
+      </tr>
+      <tr>
+        <td>GET genre by title</td>
+        <td>/movies/:title</td>
+        <td>A JSON object with directors's data, e.g.:<br />{genre: Action}</td>
+      </tr>
+      <tr>
+        <td>
+          GET list of favorite titles of a single user <br />by user's name
+        </td>
+        <td>/users/:username/favorites</td>
+        <td>
+          A JSON holding all the favorite titles of a single user, e.g.:<br />{title:
+          Good Will Hunting,<br />director: Gus van Sant<br />genre: Drama}
+        </td>
+      </tr>
+      <tr>
+        <td>ADD new user<br />Input body: JSON object e.g. {name: User A}</td>
+        <td>/users</td>
+        <td>Confirmation message</td>
+      </tr>
+      <tr>
+        <td>DELETE users by id<br />Input body: id numer</td>
+        <td>/users/:id</td>
+        <td>Confirmation message</td>
+      </tr>
+      <tr>
+        <td>
+          ADD a title to user's favs<br />Input body: JSON with movie data, e.g.
+          <br />{title: Good Will Hunting,<br />director: Gus Van Sant<br />genre:
+          Drama}
+        </td>
+        <td>/users/:username/favorites</td>
+        <td>Confirmation message</td>
+      </tr>
+      <tr>
+        <td>Remove (DELETE) a title from user's favs<br />nput: user's id</td>
+        <td>/users/:username/favorites</td>
+        <td>Confirmation message</td>
+      </tr>
+      <tr>
+        <td>Update (PUT) a username<br />Input: new username</td>
+        <td>/users/:username</td>
+        <td>Confirmation message</td>
+      </tr>
+    </table>
   </body>
 </html>
