@@ -1,14 +1,12 @@
-const express = require("express"),
-  morgan = require("morgan"),
-  uuid = require("uuid");
+const express = require("express");
+const morgan = require("morgan");
 
 const app = express();
+const bodyParser = require("body-parser");
+// const methodOverride = require("method-override");
 
 app.use(morgan("common"));
 app.use(express.static("public"));
-
-const bodyParser = require("body-parser"),
-  methodOverride = require("method-override");
 
 app.use(
   bodyParser.urlencoded({
