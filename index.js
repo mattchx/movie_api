@@ -15,7 +15,7 @@ app.use(
 );
 
 app.use(bodyParser.json());
-app.use(methodOverride());
+
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -196,7 +196,6 @@ app.post("/users", (req, res) => {
     const message = "Missing name in request body";
     res.status(400).send(message);
   } else {
-    newUser.id = uuid.v4();
     users.push(newUser);
     res.status(201).send(newUser);
   }
