@@ -1,12 +1,12 @@
-var express = require("express");
-var morgan = require("morgan");
+const express = require('express');
+const morgan = require('morgan');
 
-var app = express();
-var bodyParser = require("body-parser");
+const app = express();
+const bodyParser = require("body-parser");
 // const methodOverride = require("method-override");
 
-app.use(morgan("combined"));
-app.use(express.static("public"));
+app.use(morgan('combined'));
+app.use(express.static('public'));
 
 app.use(
   bodyParser.urlencoded({
