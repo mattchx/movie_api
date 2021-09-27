@@ -228,7 +228,7 @@ app.post("/users/:username/favorites", (req, res) => {
 });
 
 // Remove a movie from favorites
-app.delete("/users/:username/favorites", (req, res) => {
+app.delete("/users/:username/favorites", (req, res) => { 
   let toRemove = req.body;
 
   if (!toRemove.title) {
