@@ -228,7 +228,7 @@ app.post("/users/:username/favorites", (req, res) => {
 });
 
 // Remove a movie from favorites
-app.delete("/users/:username/favorites", (req, res) => { 
+app.delete("/users/:username/favorites", (req, res) => {
   let toRemove = req.body;
 
   if (!toRemove.title) {
@@ -276,6 +276,7 @@ app.use((err, req, res, next) => {
 });
 
 var http = require('http');
+console.log('testing')
 
 //Lets define a port we want to listen to
 const PORT=8080;
