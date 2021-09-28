@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 // const methodOverride = require("method-override");
 
-app.use(morgan('common'));
+app.use(morgan)('common');
 app.use(express.static('public'));
 
 app.use(
