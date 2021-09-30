@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 // const methodOverride = require("method-override");
 
-app.use(morgan)('common'));
+app.use(morgan('common'));
 app.use(express.static('public'));
 
 app.use(
@@ -275,13 +275,13 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!");
 });
 
-var http = require('http');
+// var http = require('http');
 
 
 //Lets define a port we want to listen to
 const PORT=8080;
 
-var server = http.createServer(handleRequest);
+// var server = http.createServer(handleRequest);
 
 //Lets start our server
 app.listen(PORT, function(){
